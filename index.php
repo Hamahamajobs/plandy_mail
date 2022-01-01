@@ -20,7 +20,7 @@ if (is_null($json)) {
 }
 
 
-$email_to = $params['email_to']; // メール送信先 
+$email_to = $json['email_to']; // メール送信先 
 
 http_response_code(200);
 header("Content-Type: application/json; charset=utf-8");
