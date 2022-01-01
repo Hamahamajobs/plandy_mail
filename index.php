@@ -16,13 +16,12 @@ if (is_null($json)) {
 
 $params = json_decode($json, true);   //JSONに変換　第二引数をTrueにすると連想配列になる
 
-if (is_null($params)) {
+if (is_null($params['email_to'])) {
     # error JSONをデコードできない
     http_response_code(500);        //HTTPレスポンスコード(500サーバーエラー)
-    echo "JSON error";
+    echo "JSON error 宛先メールが設定されてません";
     exit();
 }
-
 
 $email_to = $params['email_to']; // メール送信先 
 $date_spot_list = $params['date_spot_list']; // メール送信先 
@@ -43,11 +42,7 @@ $headers = "From: hama1050102@gmail.com";
 
 
 // メール送信
-// $result = mail($email_to, $subject, $email_message, $headers);
-http_response_code(200);
-header("Content-Type: application/json; charset=utf-8");
-echo "メール停止中";
-exit();
+$result = mail($email_to, $subject, $email_message, $headers);
 
 
 http_response_code(200);
