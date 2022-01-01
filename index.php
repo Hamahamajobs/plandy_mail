@@ -1,4 +1,8 @@
 <?php
+// endpoint
+// https://harumakiii.com/harumaki_api/plandy_mail/
+// POSTでなげる
+
 
 // POSTされたJSON文字列を取り出し
 $json = file_get_contents("php://input");
@@ -39,8 +43,11 @@ $headers = "From: hama1050102@gmail.com";
 
 
 // メール送信
-$result = mail($email_to, $subject, $email_message, $headers);
-
+// $result = mail($email_to, $subject, $email_message, $headers);
+http_response_code(200);
+header("Content-Type: application/json; charset=utf-8");
+echo "メール停止中";
+exit();
 
 
 http_response_code(200);
