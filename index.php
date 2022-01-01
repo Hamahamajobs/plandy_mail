@@ -21,10 +21,29 @@ if (is_null($params)) {
 
 
 $email_to = $params['email_to']; // メール送信先 
+$date_spot_list = $params['date_spot_list']; // メール送信先 
+$email_message = "";
+
+// メールのメッセージ作成
+foreach($date_spot as $date_spot_list){
+    $email_message .= "デートスポット:";
+    $email_message .= $date_spot["spot_title"];
+    $email_message .= ".\r\n";
+    $email_message .= "デートスポットのサイト:";
+    $email_message .= $date_spot["spot_url"];
+    $email_message .= ".\r\n"; 
+}
+
+// $to = "jobs1050102@gmail.com";
+$subject = "【Plandy】あなたのデートプランのお知らせ";
+// $message = "This is TEST.\r\nHow are you?";
+$headers = "From: hama1050102@gmail.com";
+
+$result = mail($email_to, $subject, $email_message, $headers);
 
 http_response_code(200);
 header("Content-Type: application/json; charset=utf-8");
-echo json_encode($params);
+echo $result;
 
 // JSON文字列をobjectに変換
 //   ⇒ 第2引数をtrueにしないとハマるので注意
