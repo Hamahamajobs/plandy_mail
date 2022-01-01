@@ -24,7 +24,7 @@ $email_to = $params['email_to']; // メール送信先
 
 http_response_code(200);
 header("Content-Type: application/json; charset=utf-8");
-echo $params;
+echo json_encode($params);
 
 // JSON文字列をobjectに変換
 //   ⇒ 第2引数をtrueにしないとハマるので注意

@@ -1,30 +1,3 @@
 {
-  "email_to": "sssss@gmail.com",
-  "date_spot_list": [
-    {
-      "aaaaa": "aaaaa",
-      "bbbb": "bbbbb",
-      "cccc": "cccc"
-    },
-    {
-      "aaaaa": "aaaaa",
-      "bbbb": "bbbbb",
-      "cccc": "cccc"
-    },
-    {
-      "aaaaa": "aaaaa",
-      "bbbb": "bbbbb",
-      "cccc": "cccc"
-    },
-    {
-      "aaaaa": "aaaaa",
-      "bbbb": "bbbbb",
-      "cccc": "cccc"
-    },
-    {
-      "aaaaa": "aaaaa",
-      "bbbb": "bbbbb",
-      "cccc": "cccc"
-    }
-]
+  "email_to": "sssss@gmail.com"
 }
