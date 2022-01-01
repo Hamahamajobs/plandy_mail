@@ -21,7 +21,7 @@ if (is_null($params)) {
 
 
 $email_to = $params['email_to']; // メール送信先 
-$date_spot_list = array($params['date_spot_list']); // メール送信先 
+$date_spot_list = $params['date_spot_list']; // メール送信先 
 $email_message = "";
 
 // メールのメッセージ作成
