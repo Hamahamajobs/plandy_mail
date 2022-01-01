@@ -1,10 +1,7 @@
 <?php
-    $arr["status"] = "yes";
-    $arr["x114"] = "114";
-    $arr["x514"] = "514";
-print json_encode($arr, JSON_PRETTY_PRINT);
+$to = "jobs1050102@gmail";
+$subject = "TEST";
+$message = "This is TEST.\r\nHow are you?";
+$headers = "From: hama1050102@gmail";
 
-
-
-
->
+mail($to, $subject, $message, $headers);
