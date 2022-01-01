@@ -34,12 +34,14 @@ foreach($date_spot_list as $date_spot){
     $email_message .= ".\r\n"; 
 }
 
-// $to = "jobs1050102@gmail.com";
 $subject = "【Plandy】あなたのデートプランのお知らせ";
-// $message = "This is TEST.\r\nHow are you?";
 $headers = "From: hama1050102@gmail.com";
 
+
+// メール送信
 $result = mail($email_to, $subject, $email_message, $headers);
+
+
 
 http_response_code(200);
 header("Content-Type: application/json; charset=utf-8");
@@ -51,19 +53,3 @@ else {
     $res['status'] = "メール送信に失敗しました";
 }
 echo json_encode($res);
-// echo json_encode($email_message);
-
-// JSON文字列をobjectに変換
-//   ⇒ 第2引数をtrueにしないとハマるので注意
-// $contents = json_decode($body, true);
-
-
-// $to = "jobs1050102@gmail.com";
-// $subject = "TEST";
-// $message = "This is TEST.\r\nHow are you?";
-// $headers = "From: hama1050102@gmail.com";
-
-// print(mail($to, $subject, $message, $headers));
-// header("Content-Type: application/json; charset=utf-8");
-// echo json_encode($contents);
-
