@@ -39,11 +39,11 @@ $subject = "【Plandy】あなたのデートプランのお知らせ";
 // $message = "This is TEST.\r\nHow are you?";
 $headers = "From: hama1050102@gmail.com";
 
-$result = mail($email_to, $subject, $email_message, $headers);
+// $result = mail($email_to, $subject, $email_message, $headers);
 
 http_response_code(200);
 header("Content-Type: application/json; charset=utf-8");
-echo $result;
+echo $email_message;
 
 // JSON文字列をobjectに変換
 //   ⇒ 第2引数をtrueにしないとハマるので注意
