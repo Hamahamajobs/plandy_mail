@@ -25,7 +25,7 @@ $date_spot_list = $params['date_spot_list']; // メール送信先
 $email_message = "";
 
 // メールのメッセージ作成
-foreach($date_spot as $date_spot_list){
+foreach($date_spot_list as $date_spot){
     $email_message .= "デートスポット:";
     $email_message .= $date_spot["spot_title"];
     $email_message .= ".\r\n";
