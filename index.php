@@ -22,9 +22,15 @@ if (is_null($params['email_to'])) {
     echo "JSON error 宛先メールが設定されてません";
     exit();
 }
+if (is_null($params['date_spot_list'])) {
+    # error JSONをデコードできない
+    http_response_code(500);        //HTTPレスポンスコード(500サーバーエラー)
+    echo "JSON error デートスポットがせっていされていません";
+    exit();
+}
 
 $email_to = $params['email_to']; // メール送信先 
-$date_spot_list = $params['date_spot_list']; // メール送信先 
+$date_spot_list = $params['date_spot_list']; // デートスポット
 $email_message = "";
 
 // メールのメッセージ作成
