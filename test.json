@@ -1,4 +1,30 @@
 {
   "email_to": "sssss@gmail.com",
-  "message": "これがメッセージです test"
+  "date_spot_list": [
+    {
+      "aaaaa": "aaaaa",
+      "bbbb": "bbbbb",
+      "cccc": "cccc"
+    },
+    {
+      "aaaaa": "aaaaa",
+      "bbbb": "bbbbb",
+      "cccc": "cccc"
+    },
+    {
+      "aaaaa": "aaaaa",
+      "bbbb": "bbbbb",
+      "cccc": "cccc"
+    },
+    {
+      "aaaaa": "aaaaa",
+      "bbbb": "bbbbb",
+      "cccc": "cccc"
+    },
+    {
+      "aaaaa": "aaaaa",
+      "bbbb": "bbbbb",
+      "cccc": "cccc"
+    }
+]
 }

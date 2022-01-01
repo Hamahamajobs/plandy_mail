@@ -1,18 +1,18 @@
 <?php
 
 // POSTされたJSON文字列を取り出し
-$body = file_get_contents("php://input");
+$json = file_get_contents("php://input");
 
-if (is_null($body)) {
+if (is_null($json)) {
     # error データが無い
     http_response_code(500);        //HTTPレスポンスコード(500サーバーエラー)
     echo "no data (JSON)";
     exit();
 }
 
-$json = json_decode($body, true);   //JSONに変換　第二引数をTrueにすると連想配列になる
+$params = json_decode($json, true);   //JSONに変換　第二引数をTrueにすると連想配列になる
 
-if (is_null($json)) {
+if (is_null($params)) {
     # error JSONをデコードできない
     http_response_code(500);        //HTTPレスポンスコード(500サーバーエラー)
     echo "JSON error";
@@ -20,11 +20,11 @@ if (is_null($json)) {
 }
 
 
-$email_to = $json['email_to']; // メール送信先 
+$email_to = $params['email_to']; // メール送信先 
 
 http_response_code(200);
 header("Content-Type: application/json; charset=utf-8");
-echo $email_to;
+echo $params;
 
 // JSON文字列をobjectに変換
 //   ⇒ 第2引数をtrueにしないとハマるので注意
