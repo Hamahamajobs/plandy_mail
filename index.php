@@ -2,6 +2,8 @@
 
 // POSTされたJSON文字列を取り出し
 $body = file_get_contents("php://input");
+echo $body;
+
 if (is_null($body)) {
     # error データが無い
     http_response_code(500);        //HTTPレスポンスコード(500サーバーエラー)
