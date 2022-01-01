@@ -43,7 +43,7 @@ $headers = "From: hama1050102@gmail.com";
 
 http_response_code(200);
 header("Content-Type: application/json; charset=utf-8");
-echo $email_message;
+echo $date_spot_list;
 
 // JSON文字列をobjectに変換
 //   ⇒ 第2引数をtrueにしないとハマるので注意
