@@ -1,17 +1,17 @@
 {
-  "email_to": "sssss@gmail.com",
+  "email_to": "jobs1050102@gmail.com",
   "date_spot_list": [
     {
-      "spot_url": "aaaaa",
-      "spot_title": "bbbbb"
+      "spot_url": "https://aaaaa.com/aaaaa1",
+      "spot_title": "bbbbb1"
     },
     {
-      "spot_url": "aaaaa",
-      "spot_title": "bbbbb"
+      "spot_url": "https://aaaaa.com/aaaaa2",
+      "spot_title": "bbbbb2"
     },
     {
-      "spot_url": "aaaaa",
-      "spot_title": "bbbbb"
+      "spot_url": "https://aaaaa.com/aaaaa3",
+      "spot_title": "bbbbb3"
     }
 ]
 }
